@@ -1,0 +1,178 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>This is our blog website</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;    
+            }
+            body {
+                background-color: whitesmoke;
+                color: #f8f6f6;
+                text-align: center;
+                padding: 20px;
+            }
+            .container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 30px;
+                background: #5f5e5e;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+            @media (min-width: 1024px) {
+                .container {
+                    padding: 50px;
+                }
+                iframe {
+                    height: 400px;
+                }
+            }
+                @keyframes colorRemix {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            header h1 {
+                font-size: 3em;
+                background: linear-gradient(90deg, #f30505, #fabd62, #f5f5ad, #08fa9d, #4615f8, #a7f810, #ff0099);
+                background-size: 400% 400%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: colorRemix 5s infinite alternate ease-in-out;
+                text-shadow: 0px 0px 10px rgba(22, 230, 245, 0.7);
+            }
+            nav {
+                margin: 20px 0;
+                padding: 15px;
+                background: #222;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+            nav a {
+                color: #09b9ff;
+                text-decoration: none;
+                font-size: 1.3em;
+                font-weight: bold;
+                transition: 0.3s;
+                padding: 10px 15px;
+                border-radius: 5px;
+            }
+            nav a:hover {
+                background: #03cdff;
+                color: #222;
+            }
+            section, article {
+                background: beige;
+                padding: 25px;
+                margin: 25px 0;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+            h2 {
+                color: black;
+                margin-bottom: 15px;
+                font-size: 1.8em;
+            }
+            iframe {
+                width: 100%;
+                border: 4px solid #0e0000;
+                border-radius: 8px;
+                height: 350px;
+            }
+            img {
+                width: 100%;
+                border-radius: 8px; 
+                border: 2px solid #0e0000;
+            }
+            footer {
+                background: #070707;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 5px;
+                font-size: 1em;
+                color: #9bfc4d;
+            }
+        </style>    
+            <script>
+            function showAbout() {
+                document.getElementById("main-content").innerHTML = `
+                    <div class="container">
+                        <h2>About</h2>
+                        <p>Made by Empinado&Ocura this is our project on semi finals website</p>
+                        <br>
+                        <a href="#" onclick="showHome()" style="color:#03cdff; font-size: 1.2em; text-decoration: none;">   Back to Home</a>
+                    </div>
+                `;
+            }
+
+            function showHome() {
+                location.reload(); 
+            }
+        </script>
+    </head>
+    <body>
+
+    <div id="main-content">
+
+        <div class="container">
+
+            <header>
+                <h1>This is our blog</h1>
+                <p>we hope you like it </p>
+            </header>
+
+            <nav>
+                <a href="#" onclick="showHome()">Home</a>
+                <a href="#" onclick="showAbout()">About Us</a>
+            </nav>
+
+        <article>
+        <h2> HTML TUTORIAL</h2>        
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/FQdaUv95mR8" title="HTML Tutorial for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article> 
+
+            <section>
+                <h2>Cebu college of Cebu city location</h2>
+                <iframe height="150" src="https://www.google.com/maps/embed?pb=%211m18%211m12%211m3%211d3901.9330554936485%212d123.8960169%213d10.2944329%212m3%211f0%212f0%213f0%213m2%211i1024%212i768%214f13.1%213m3%211m2%211s0x33a99bfcc60d650d%3A0x5ee73506c68dd233%212sCebu+Eastern+College+Cebu+city%215e0%213m2%211sen%212sph%214v1678456517191%215m2%211sen%212sph&fbclid=IwY2xjawJCi6ZleHRuA2FlbQIxMAABHSOMhEkp6tDp3AJ6iRKfYqapAVE9k1Mwf7k8iIic6PEAae7cKjar9yXwxQ_aem_IfL6AFWTBPo_YEugbXlJIQ" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                    <h2>Image Map</h2>
+                    <img src="c:\our blog website\our blog website\449788029_445089894991036_6923538535744541528_n.png" usemap="#imagemap">
+                    <map name="imagemap">
+                        <area shape="rect" coords="50,50,350,350" href="https://maps.app.goo.gl/QzS7nBoaX6cbafWf9?g_st=com.google.maps.preview.copy" alt="Resource 1">
+                        <area shape="rect" coords="400,50,750,350" href="https://maps.app.goo.gl/1JwGkBxatqpvjCnT9">
+                </map>
+            </section>
+
+            <section>
+                <h2>My Favorite Emojis</h2>
+                
+                <ul style="list-style: none; font-size: 1.5em;">
+                <link rel="icon" href="icon2.png" type="image/x-icon">
+                    <li>&#128507;</li>
+                    <li>&#128511; </li>
+                    <li>&#128508;   </li>
+                    <li>&#x1F680;</li>
+                    <li>&#9829;</li>
+                </ul>
+            </section>
+        
+            <footer>
+                <p>Copyright: &copy; &#60;This is our blog in 2025&#62;</p>
+            </footer>
+        </div>
+        </div>
+
+    </body>
+    </html>
+
